@@ -25,6 +25,9 @@ $objets = getListObject();
                 <img src="../assets/image/<?= $_SESSION['pdp']; ?>" alt="Profil">
                 <li><?= $_SESSION['user_name']; ?></li>
             </ul>
+            <ul>
+                <a href="formulaire-objet.php"><button>Add thing</button></a>
+            </ul>
             <a href="filtre.php"><button>Filtrer</button></a>
         </nav>
     </header>
