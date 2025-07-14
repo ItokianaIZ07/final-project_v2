@@ -11,7 +11,7 @@
         <form action="" method="post" enctype="multipart/form-data">
             <label for="photo">Photo</label>
             <input type="file" name="image" id="photo" accept=".jpg, .jpeg, .png" required>
-
+            
             <input type="submit" value="valider">
         </form>
     </main>
