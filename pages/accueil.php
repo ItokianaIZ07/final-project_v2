@@ -51,7 +51,12 @@ $objets = getListObject();
                                     <td class="fw-semibold">
                                         <div class="row">
                                             <div class="col">
-                                                
+                                                <?php $photo = getImageObjet($o['id_objet']); ?>
+                                                <?php if(empty($photo)){ ?>
+                                                    <img src="../assets/image/default.png" alt="">
+                                                <?php }else{?>
+                                                    <img src="../assets/image/<?= $photo; ?>" alt="">
+                                                <?php }?>
                                             </div>
                                             <div class="col">
                                                 <?= $o['nom_objet']; ?>

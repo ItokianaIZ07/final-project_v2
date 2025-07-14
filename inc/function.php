@@ -108,3 +108,16 @@ function getObjetFiltre($categorie)
     }
     return null;
 }
+
+function getImageObjet($id)
+{
+    $sql = "SELECT * FROM emprunt_v_images_objet WHERE id_objet = '%s'";
+    $sql = sprintf($sql, $id);
+    $request = mysqli_query(dbconnect(), $sql);
+    if(mysqli_num_rows($request) > 0)
+    {
+        $response = mysqli_fetch_assoc($request);
+        return $response['nom_image'];
+    }
+    return null;
+}
