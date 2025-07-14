@@ -48,7 +48,16 @@ $objets = getListObject();
                         <tbody class="text-center align-middle">
                             <?php foreach ($objets as $o) { ?>
                                 <tr>
-                                    <td class="fw-semibold"><?= $o['nom_objet']; ?></td>
+                                    <td class="fw-semibold">
+                                        <div class="row">
+                                            <div class="col">
+                                                
+                                            </div>
+                                            <div class="col">
+                                                <?= $o['nom_objet']; ?>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <?php $emprunt = verifieSiEmprunte($o['id_objet']); ?>
                                     <td>
                                         <?= $emprunt !== false ? "<span class='badge bg-success'>$emprunt</span>" : "<span class='text-muted fst-italic'>Non emprunté</span>" ?>
