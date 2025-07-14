@@ -14,7 +14,7 @@ $objets = getListObject();
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/style/style-accueil.css">
     <title>Accueil</title>
-    
+
 </head>
 
 <body>
@@ -51,15 +51,17 @@ $objets = getListObject();
                                     <td class="fw-semibold">
                                         <div class="row">
                                             <div class="col">
-                                                <?php $photo = getImageObjet($o['id_objet']); ?>
-                                                <?php if(empty($photo)){ ?>
+                                                <?php $photo = getImageObjet($o['id_objet']);?>
+                                                <?php if (empty($photo)) { ?>
                                                     <img src="../assets/image/default.png" alt="">
-                                                <?php }else{?>
+                                                <?php } else { ?>
                                                     <img src="../assets/image/<?= $photo; ?>" alt="">
-                                                <?php }?>
+                                                <?php } ?>
                                             </div>
                                             <div class="col">
-                                                <?= $o['nom_objet']; ?>
+                                                <a href="affichage.php?id=<?= $o['id_objet']; ?>&name=<?= $o['nom_objet']; ?>">
+                                                    <?= $o['nom_objet']; ?>
+                                                </a>
                                             </div>
                                         </div>
                                     </td>

@@ -89,4 +89,4 @@ create or replace view emprunt_v_categorie_objet as
     SELECT o.id_objet, o.nom_objet, o.id_categorie, c.nom_categorie FROM emprunt_objet as o JOIN emprunt_categorie_objet as c ON c.id_categorie = o.id_categorie;
 
 create or replace view emprunt_v_images_objet as 
-    SELECT o.id_objet, o.nom_objet, o.id_categorie, i.nom_image FROM emprunt_objet as o JOIN emprunt_images_objet as i ON o.id_objet = i.id_objet    
+    SELECT o.id_objet, o.nom_objet, o.id_categorie, i.nom_image, i.id_image FROM emprunt_objet as o JOIN emprunt_images_objet as i ON o.id_objet = i.id_objet;    
